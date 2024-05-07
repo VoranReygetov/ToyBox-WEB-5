@@ -16,10 +16,9 @@ function checkBrackets(str) {
         }
     }
 
-    return stack.length === 0;  // Якщо залишились невідкриті дужки, то помилка
+    return stack.length === 0;  // Якщо залишились невідкриті дужки
 }
 
-// Приклад використання
 console.log(checkBrackets("(someFn)"));  // true
 console.log(checkBrackets("(()"));      // false
 console.log(checkBrackets("{[()]}"));   // true
