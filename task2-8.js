@@ -15,27 +15,23 @@ function setAlarm() {
     alarmSet = true;
     document.getElementById("status").innerText = `Будильник встановлено на ${alarmTime.toLocaleTimeString()}`;
 
-    alarmInterval = setInterval(checkAlarm, 1000);
+    const currentTime = new Date();
+    let timeDifference = alarmTime - currentTime
+    alarmTimeOut = setTimeout(breakAlarm, timeDifference)
 }
 
-function checkAlarm() {
+function breakAlarm() {
     if (!alarmSet) {
         return;
     }
-    const currentTime = new Date();
 
-    // Якщо поточний час більший або рівний часу будильника
-    if (currentTime >= alarmTime) {
-        clearInterval(alarmInterval); 
-        alarmSet = false;
-        document.getElementById("status").innerText = "Будильник спрацював!";
-        alert("Час будильника!"); 
-    }
+    alarmSet = false;
+    document.getElementById("status").innerText = "Будильник спрацював!";
+    alert("Час будильника!"); 
 }
-
 function resetAlarm() {
     if (alarmSet) {
-        clearInterval(alarmInterval);
+        clearTimeout(alarmInterval);
         alarmSet = false;
         document.getElementById("status").innerText = "Будильник вимкнено.";
     }
