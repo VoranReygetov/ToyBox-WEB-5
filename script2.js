@@ -1,9 +1,12 @@
 // Task 2
 const productDatabase = {
-    1: { name: "Laptop", price: 1500 },
-    2: { name: "Phone", price: 700 },
-    3: { name: "Tablet", price: 400 },
+    1: { name: "Notebook" },
+    2: { name: "Pen" },
+    3: { name: "Backpack" },
+    4: { name: "Water Bottle" },
+    5: { name: "Lunchbox" }
 };
+
 
 function getProductDetails(productId, successCallback, errorCallback) {
 
