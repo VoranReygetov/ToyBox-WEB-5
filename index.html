@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Співпадаючі елементи</title>
     <script src="task1-8.js"></script>
+    <script src="task2-8.js"></script>
 </head>
 <body>
     <h2>Знайдіть найменший спільний елемент між двома масивами</h2>
@@ -15,5 +16,12 @@
     <p id="result-1"></p>
     <button onclick="bubbleSort()">Відсортувати перший масив</button>
     <p id="result-2"></p>
+    <hr>
+    <h2>Будильник</h2>
+    <label>Введіть час для будильника:</label>
+    <input type="datetime-local" id="alarmTime"><br><br>
+    <button onclick="setAlarm()">Встановити будильник</button>
+    <button onclick="resetAlarm()">Скинути будильник</button>
+    <p id="status">Будильник не встановлено.</p>
 </body>
 </html>

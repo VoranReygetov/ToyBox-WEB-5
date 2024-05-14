@@ -16,7 +16,7 @@ function checkBrackets(str) {
         }
     }
 
-    return stack.length === 0;  // Якщо залишились невідкриті дужки
+    return stack.length === 0;  // Якщо залишились невідкриті дужки буде false
 }
 
 console.log(checkBrackets("(someFn)"));  // true
