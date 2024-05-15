@@ -10,7 +10,6 @@ const productDatabase = {
 
 function getProductDetails(productId, successCallback, errorCallback) {
 
-
     const product = productDatabase[productId];
     if (product) {
         successCallback(product);
@@ -19,12 +18,15 @@ function getProductDetails(productId, successCallback, errorCallback) {
     }
 }
 
+const success = (product) => console.log("Product found:", product)
+const error = (text) => console.error(text)
+
 getProductDetails(1, 
-    (product) => console.log("Product found:", product), 
-    (error) => console.error(error)
+    success,
+    error,
 );
 
 getProductDetails(99, 
-    (product) => console.log("Product found:", product), 
-    (error) => console.error(error)
+    success,
+    error,
 );
